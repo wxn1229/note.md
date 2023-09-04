@@ -7,14 +7,9 @@ install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+
+add path  
 ```shell
-brew install GCC
-```
-P.S. : using in bash 
-
-
-add path
-```
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/wxn1229/.profile
 ```
 
@@ -22,12 +17,41 @@ add path
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
+
+
 - [fish]('https://github.com/fish-shell/fish-shell')
 
 ```shell
 brew install fish
 ```
+- add brew path in ~/.config/fish/config.fish 
+```shell
+set -x PATH $PATH /home/linuxbrew/.linuxbrew/bin
+set PATH $PATH ~/.local/bin
+set -gx PATH $HOME/.local/share/nvm/v18.17.1/bin $PATH
+```
+- GCC
+```shell
+sudo apt update
+sudo apt install gcc
+sudo apt install g++
 
+```
+- unzip 
+```shell
+sudo apt install unzip
+```
+- [fish.nvm]('https://github.com/jorgebucaran/nvm.fish')
+```shell
+fisher install jorgebucaran/nvm.fish
+nvm install lts
+```
+add brew path in ~/.config/fish/config.fish 
+```shell
+set -x PATH $PATH /home/linuxbrew/.linuxbrew/bin
+set PATH $PATH ~/.local/bin
+set -gx PATH $HOME/.local/share/nvm/v18.17.1/bin $PATH
+```
 - [neovim]('https://github.com/neovim/neovim/wiki/Installing-Neovim')
 
 ```shell
@@ -92,3 +116,10 @@ Fira Code
 ```shell
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
+
+- [mylazyvim]('https://github.com/wxn1229/mylazyvim')
+```bash
+cd /.config/nvim
+git clone https://github.com/wxn1229/mylazyvim 
+```
+- [markdown-preview]('https://github.com/wxn1229/note.md/blob/main/markdown-preview.md') 
